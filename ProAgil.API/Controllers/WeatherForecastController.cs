@@ -6,16 +6,16 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using ProAgil.API.Data;
+using ProAgil.Repository;
 
 namespace ProAgil.API.Controllers {
     [ApiController]
     [Route ("[controller]")]
     public class WeatherForecastController : ControllerBase {
         
-        public readonly DataContext _context;
+        public readonly ProAgilContext _context;
 
-        public WeatherForecastController(DataContext context)
+        public WeatherForecastController(ProAgilContext context)
         {
             _context = context;
         }
